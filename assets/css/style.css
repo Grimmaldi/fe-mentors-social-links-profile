@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --background-black: rgb(20, 20, 20);
     --profile-background-black: rgb(31, 31, 31);
@@ -17,51 +25,82 @@ body {
     color: white;
     display: flex;
     font-family: Inter;
-    align-content: center;
+    align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .container {
+    background-color: var(--profile-background-black);
     align-items: center;
     display: inherit;
     flex-direction: column;
-    width: 600px;
-    background-color: var(--profile-background-black);
+    width: fit-content;
+    padding: 25px;
+    border-radius: 15px;
 }
 
 .user-profile {
     display: inherit;
     flex-direction: column;
-    align-content: center;
+    align-self: center;
     text-align: center;
 }
 
 .profile-pic {
+    display: inherit;
     border-radius: 100%;
     width: 100px;
+    align-self: center;
+    margin: 20px;
+
 }
 
 .user-name {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 600;
+    align-self: center;
+    margin: 10px;
 }
 
 .user-residence-city {
     color: var(--highlight-limegreen);
+    font-size: 0.9rem;
+    font-weight: 500;
+    align-self: center;
 }
 
 .social-links-list {
+    display: inherit;
+    flex-direction: column;
     list-style-type: none;
+    width: min-content;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.social-links-list a {
+    text-decoration: none;
+}
+
+.user-quote {
+    margin-top: 30px;
+    font-weight: 300;
 }
 
 button {
+    display: inherit;
     background-color: var(--button-inactive-darkgrey);
     color: white;
-    margin: 1em;
-    width: 500px;
-    height: 4em;
+    margin: 10px;
+    width: 380px;
+    height: 3.4rem;
     border-width: 0px;
-    border-radius: 5px;
+    border-radius: 9px;
+    font-size: 1rem;
+    font-weight: bolder;
+    align-self: center;
 }
 
 button:hover {
